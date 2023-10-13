@@ -67,7 +67,7 @@ while ((match = regexPattern.exec(htmlString)) !== null) {
 This code uses the `exec` method with the global (`g`) flag to find and display matched HTML tags in the input HTML string. It extracts the tag name, attributes, and inner content.
 
 
-**Example No. 2: Matching HTML Tags in a String**
+**Example No. 2: Matching HTML Tags in an Array of String**
 ```
 const htmlArray = [
   '<h1>Welcome to Regex Tutorial</h1>',
