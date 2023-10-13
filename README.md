@@ -40,6 +40,55 @@ To match HTML tags with a regex, we can use the following pattern:
      * `'<\/\1>'`: This part matches the corresponding closing tag using a backreference `'\1'`. The `'\1'` refers back to the captured tag name, ensuring that the opening and closing tags match.
      * `'|\s+\/>)'`: Alternatively, this part matches a self-closing tag with a space and a forward slash (e.g., `'<img />)'`.
 
+ ### Code Examples
+Matching HTML tags with regex can be a powerful way to extract and manipulate HTML content. Let's see two code examples using javascript to match HTML tags using the regex pattern.
+
+**Example No. 1: Matching HTML Tags in a String**
+`const htmlString = '
+    <div>
+        <p>This is a paragraph.</p>
+    </div>
+    <a href="https://example.com">Visit Example</a>';
+
+// Define the regex pattern
+const regexPattern = /<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)/g;
+
+// Find and display matches
+let match;
+while ((match = regexPattern.exec(htmlString)) !== null) {
+  console.log(`Matched HTML Tag: ${match[0]}`);
+  console.log(`Tag Name: ${match[1]}`);
+  console.log(`Attributes: ${match[2] || 'None'}`);
+  console.log(`Inner Content: ${match[3] || 'Empty'}`);
+  console.log('----------------------');
+}
+`
+This code uses the `exec` method with the global (`g`) flag to find and display matched HTML tags in the input HTML string. It extracts the tag name, attributes, and inner content.
+
+**Example No. 1: Matching HTML Tags in a String**
+`const htmlArray = [
+  '<h1>Welcome to Regex Tutorial</h1>',
+  '<p>Learn regex with examples</p>',
+  '<div class="content">This is a div.</div>',
+  '<a href="https://example.com">Visit Example</a>',
+];
+
+// Define the regex pattern
+const regexPattern = /<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)/;
+
+// Find and display matches in each string
+htmlArray.forEach((htmlString, index) => {
+  const match = htmlString.match(regexPattern);
+  if (match) {
+    console.log(`Matched HTML Tag in String ${index + 1}: ${match[0]}`);
+    console.log(`Tag Name: ${match[1]}`);
+    console.log(`Attributes: ${match[2] || 'None'}`);
+    console.log(`Inner Content: ${match[3] || 'Empty'}`);
+    console.log('----------------------');
+  }
+});
+`
+In this example, we use the **match** method to find and display matched HTML tags in an array of HTML strings. It also extracts the tag name, attributes, and inner content for each string.
 
 ## Author
 
