@@ -44,7 +44,7 @@ To match HTML tags with a regex, we can use the following pattern:
 Matching HTML tags with regex can be a powerful way to extract and manipulate HTML content. Let's see two code examples using javascript to match HTML tags using the regex pattern.
 
 **Example No. 1: Matching HTML Tags in a String**
-`const htmlString = '
+```const htmlString = '
     <div>
         <p>This is a paragraph.</p>
     </div>
@@ -62,11 +62,11 @@ while ((match = regexPattern.exec(htmlString)) !== null) {
   console.log(`Inner Content: ${match[3] || 'Empty'}`);
   console.log('----------------------');
 }
-`
+```
 This code uses the `exec` method with the global (`g`) flag to find and display matched HTML tags in the input HTML string. It extracts the tag name, attributes, and inner content.
 
 **Example No. 1: Matching HTML Tags in a String**
-`const htmlArray = [
+```const htmlArray = [
   '<h1>Welcome to Regex Tutorial</h1>',
   '<p>Learn regex with examples</p>',
   '<div class="content">This is a div.</div>',
@@ -87,7 +87,7 @@ htmlArray.forEach((htmlString, index) => {
     console.log('----------------------');
   }
 });
-`
+```
 In this example, we use the **match** method to find and display matched HTML tags in an array of HTML strings. It also extracts the tag name, attributes, and inner content for each string.
 
 ## Author
