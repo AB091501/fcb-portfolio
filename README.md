@@ -41,7 +41,9 @@ To match HTML tags with a regex, we can use the following pattern:
      * `'|\s+\/>)'`: Alternatively, this part matches a self-closing tag with a space and a forward slash (e.g., `'<img />)'`.
 
  ### Code Examples
-Matching HTML tags with regex can be a powerful way to extract and manipulate HTML content. Let's see two code examples using javascript to match HTML tags using the regex pattern.
+Matching HTML tags with regex can be a powerful way to extract and manipulate HTML content. However, regex has limitations and may not handle all edge cases. For more complex HTML parsing, consider using a dedicated HTML parsing library in your programming language.
+
+Let's see two code examples using javascript to match HTML tags using the regex pattern.
 
 **Example No. 1: Matching HTML Tags in a String**
 ```
