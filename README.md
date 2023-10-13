@@ -4,6 +4,7 @@ In this tutorial, we will learn how to use a regular expression (regex) to match
 
 ## Summary
 Today I will be covering and breaking down the components of a regular expression used to match HTML tag. HTML tags are used to structure the content of a web page. They consist of an opening tag, content, and a closing tag. Matching HTML tags with regex can be useful for parsing and extracting data from web pages or validating HTML content.
+
 /^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/
 
 ## Table of Contents
